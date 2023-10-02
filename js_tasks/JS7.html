@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Task 7</title>
+    <style>
+      #Container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background-color: yellow;
+      }
+
+      #Animation {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Task 7</h1>
+    <h5>By 21BAI1109 Mohamed Sameer</h5>
+    <a href="index.html">Index</a> <br />
+    <br />
+
+    <div id="Container">
+      <div id="Animation"></div>
+    </div>
+    <br />
+    <br />
+
+    <button onclick="startAnimation()">Start Animation</button>
+    <button onclick="stopAnimation()">Stop Animation</button>
+
+    <script>
+      var id = null;
+      function startAnimation() {
+        var ele = document.getElementById("Animation");
+        var position = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+          if (position == 350) {
+            clearInterval(id);
+          } else {
+            position++;
+            ele.style.top = position + "px";
+            ele.style.left = position + "px";
+          }
+        }
+      }
+
+      function stopAnimation() {
+        clearInterval(id);
+      }
+
+      startButton.addEventListener("click", startAnimation);
+      stopButton.addEventListener("click", stopAnimation);
+    </script>
+  </body>
+</html>

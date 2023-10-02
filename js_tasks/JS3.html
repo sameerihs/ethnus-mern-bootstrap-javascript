@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Task 3</title>
+  </head>
+  <body>
+    <h1>Javascript Task 3</h1>
+    <h5>By 21BAI1109 Mohamed Sameer</h5>
+    <a href="index.html">Index</a> <br />
+    <br />
+
+    <h3>Calculator</h3>
+    <label for="a">1st Number </label>
+    <input type="number" id="a" /> <br />
+    <br />
+    <label for="b">2nd Number </label>
+    <input type="number" id="b" /> <br />
+    <br />
+
+    <button onclick="Mul()">Multiply</button>
+    <button onclick="Div()">Divide</button> <br />
+    <br />
+
+    <span id="answer"></span>
+
+    <script>
+      function Mul() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = a * b;
+        document.getElementById("answer").innerHTML = "The result is: " + c;
+      }
+      function Div() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = a / b;
+        document.getElementById("answer").innerHTML = "The result is: " + c;
+      }
+    </script>
+  </body>
+</html>
